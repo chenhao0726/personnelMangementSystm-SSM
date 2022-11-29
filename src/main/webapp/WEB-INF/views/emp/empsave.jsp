@@ -30,7 +30,7 @@
 </head>
 <body>
     <div class="alert alert-info">当前位置<b class="tip"></b>学员管理<b class="tip"></b>添加</div>
-    <form action="/stu?type=save" method="post">
+    <form action="/emp/save" method="post">
     	<input type="hidden" name="id" value="${employee.id}">
 	    <table class="tbform">
 	        <thead>
@@ -92,7 +92,7 @@
 					<td class="tdl">部门</td>
 					<td>
 						<div class="input-append">
-							<select style="width: 65px;">
+							<select name="dept.id">
 								<option>--请选择--</option>
 								<c:forEach items="${depts}" var="dep">
 									<option name="class_id"

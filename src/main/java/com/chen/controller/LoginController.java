@@ -28,7 +28,7 @@ public class LoginController {
         return result;
     }
 
-    @RequestMapping("")
+    @RequestMapping("/loginOut")
     public String loginOut(HttpSession session) {
         session.removeAttribute("loginUser");
         return "redirect:/login.jsp";
