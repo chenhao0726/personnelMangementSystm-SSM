@@ -20,9 +20,10 @@
 				console.log(username+"==="+password)
 				$.post("/login",{username:username,password:password},function (data){
 					// 通过返回的值判断是否登录成功
+					alert(data)
 					if (data.success) {
 						// 登录成功，跳转
-						location.href="main/index"
+						location.href="/main/index"
 					} else {
 						$("#msg").text(data.message)
 					}
@@ -50,7 +51,7 @@
 	        </p>
 	        <p class="tip" id="msg"></p>
 	        <hr />
-	        <input type="submit" value=" 登 录 " id="loginBtn" class="btn btn-primary btn-large login" />
+	        <input type="button" value=" 登 录 " id="loginBtn" class="btn btn-primary btn-large login" />
 	        &nbsp;&nbsp;&nbsp;<input type="reset" value=" 取 消 " class="btn btn-large" />
 	    </div>
     </form>
